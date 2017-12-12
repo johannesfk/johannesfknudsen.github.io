@@ -9,9 +9,10 @@
       border: none;
       color: #FFFFFF;
       text-align: center;
-      font-size: 28px;
-      padding: 20px;
-      width: 200px;
+      font-size: 8em;
+      font-weight: bolder;
+      padding: 200px;
+      width: 7em;
       transition: all 0.5s;
       cursor: pointer;
       margin: 5px;
@@ -29,12 +30,12 @@
       position: absolute;
       opacity: 0;
       top: 0;
-      right: -20px;
+      right: -200px;
       transition: 0.5s;
     }
 
     .button:hover span {
-      padding-right: 25px;
+      padding-right: 75px;
     }
 
     .button:hover span:after {
@@ -43,6 +44,11 @@
     }
     .ButtonWrapper {
       text-align: center;
+    }
+    h1 {
+      font-size: 5em;
+      font-weight: bold;
+      font-family: "Courier New", Courier, monospace;
     }
 
   </style>
@@ -60,7 +66,7 @@
     function myFunction() {
       setInterval(function() {
         alert(location.hostname + "\nSays Hallo!");
-      }, 500);
+      }, 2500);
     }
   </script>
 
