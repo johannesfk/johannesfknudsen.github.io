@@ -67,7 +67,16 @@
       setInterval(function() {
         alert(location.hostname + "\nSays Hallo!");
       }, 2500);
+      var i = i + 1;
+    //  while (i > 15);
     }
+    if(i > 15){
+    window.setTimeout(function(){
+        window.location.href = "https://www.google.com";
+
+    }, 5000);
+
+}
   </script>
 
 </body>
