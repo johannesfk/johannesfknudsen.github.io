@@ -76,7 +76,7 @@
     var i = 0;
     function myFunction() {
       setInterval(function() {
-        if (alert(location.hostname + " siger\nHejsa!\nGlæder du dig til jul?") == true) {
+        if (confirm(location.hostname + " siger\nHejsa!\nGlæder du dig til jul?") == true) {
           i += 1;
         } else {
           i -= 1;
