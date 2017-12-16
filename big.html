@@ -42,15 +42,16 @@
       opacity: 1;
       right: 0;
     }
+
     .ButtonWrapper {
       text-align: center;
     }
+
     h1 {
       font-size: 5em;
       font-weight: bold;
       font-family: "Courier New", Courier, monospace;
     }
-
   </style>
   <title>Big button</title>
 </head>
@@ -61,22 +62,33 @@
     <button class="button" onclick="myFunction()"><span>PUSH ME!</span></button>
   </div>
 
-
   <script>
+    // document.getElementById("RedButton").onclick = function () {
+    // id="RedButton"
+    // }
+    // function myFunction() {
+    //   setInterval(function() {
+    //     alert(location.hostname + "\nSays Hallo!");
+    //   }, 2500);
+    //   // var i = i + 1
+    //   // while (i < 15);
+    // }
+    var i = 0;
     function myFunction() {
       setInterval(function() {
-        alert(location.hostname + "\nSays Hallo!");
+        if (confirm(location.hostname + "Siger\nHejsa!") == true) {
+          i += 1;
+        } else {
+          i -= 1;
+        }
+        if (i >= 5) {
+          window.setTimeout(function() {
+            window.location.href = "http://htxbornholm.dk/thomas-elias/Lidt%20ekstra%20xd/TechnoHaven/Technohaven.htm";
+          }, 500);
+        }
       }, 2500);
-      var i = i + 1;
-    //  while (i > 15);
     }
-    if(i > 15){
-    window.setTimeout(function(){
-        window.location.href = "https://www.google.com";
 
-    }, 5000);
-
-}
   </script>
 
 </body>
