@@ -22,7 +22,6 @@
 
   https://skyfire.vimeocdn.com/1521641828-0x33e70d73807b0e4256ea754d7b509a5db5af052c/260662470/sep/video/958830567/chop/segment-286.m4s
 
-Length 709
 
 
 ## 2. Jared Fadel
@@ -70,13 +69,12 @@ Length 709
 
   **Audio**
 
-  https://104skyfiregce-vimeo.akamaized.net/exp=1521683467~acl=%2F258230703%2F%2A~hmac=3bbd83b05b3a8fb88ab667dde995a66249485ebafebe8f9a76b91087fc4badad/258230703/sep/audio/958447783/chop/segment-925.m4s
+  https://104skyfiregce-vimeo.akamaized.net/exp=1521732502~acl=%2F258230703%2F%2A~hmac=75ded12ca01111b25eb4a4d17f1c484b12bdd70a4da24ded13382a3bbcc1c75b/258230703/sep/audio/958447783/chop/segment-701.m4s
 
   **Video**
 
-  https://104skyfiregce-vimeo.akamaized.net/exp=1521683467~acl=%2F258230703%2F%2A~hmac=3bbd83b05b3a8fb88ab667dde995a66249485ebafebe8f9a76b91087fc4badad/258230703/sep/video/958447781/chop/segment-925.m4s
+  https://104skyfiregce-vimeo.akamaized.net/exp=1521732502~acl=%2F258230703%2F%2A~hmac=75ded12ca01111b25eb4a4d17f1c484b12bdd70a4da24ded13382a3bbcc1c75b/258230703/sep/video/958447781/chop/segment-701.m4s
 
-  Length = 926
 
 ## 5. Nadim Carlsen
   "What Will People Say", "Holiday"
