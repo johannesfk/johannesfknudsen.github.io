@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Johannes' nedtællings side - Farmer Studios</title>
+  <meta name="description" content="Dette er en web side som tæller ned til fremtiden (lige nu galla), lavet af Farmer Studios ">
+  <meta name="theme-color" content="#6c31fb"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bgimg {
+    background-image: url('https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/13064485_999261020123765_4749258082909858346_o.jpg?oh=2d5bb5ab81bf2ce8aa849c014433aaa8&oe=5B0628C4');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(213, 46, 129);
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+</style>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <p>Farmer Studios</p>
+  </div>
+  <div class="middle">
+    <h1>GALLA er om </h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+    <iframe src="https://www.booomerang.dk/projects/stoette-filmoptagelser-paa-bornholm/widget/" width="380px" height="380px" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <div class="bottomleft">
+    <a href="./big.html">Johannes Knudsen's fanstiske hjemmeside!</a>
+  </div>
+</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 4, 2018 17:00:00").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+    var days = Math.floor(distance % (1000 * 60 * 60 * 24 * 365) / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = years + "yr " + days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "Godt forår! ♥";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
