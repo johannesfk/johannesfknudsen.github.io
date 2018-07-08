@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Home</title>
+  <!--Load jQuery and fullpage tags -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://rawgit.com/alvarotrigo/fullPage.js/master/jquery.fullPage.js"></script>
+
+  <!--Custom script -->
+  <script src='fullpage.js'></script>
+
+  <!--We will overide some default styles here -->
+  <link rel="stylesheet" href='styles.css'>
+  <!-- Adding fullpage.css is essential-->
+  <link rel="stylesheet" type="text/css" href="https://rawgit.com/alvarotrigo/fullPage.js/master/jquery.fullPage.css" />
+
+  <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+<script src="vendors/easings.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <div id="fullpage">
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+  </div>
+
+  <div class=‘ section fp-auto-height’></div>
+</body>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    $(#fullpage).fullpage();
+
+  });
+</script>
