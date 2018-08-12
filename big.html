@@ -74,6 +74,7 @@
     //   // while (i < 15);
     // }
     var i = 0;
+    var audio = new Audio('gigi_d.mp3');
     function myFunction() {
       setInterval(function() {
         if (confirm("Hejsa!") == true) {
@@ -81,9 +82,10 @@
         } else {
           i -= 1;
         }
-        if (i >= 5) {
+        if (i >= 2) {
           window.setTimeout(function() {
-            window.location.href = "http://htxbornholm.dk/thomas-elias/Lidt%20ekstra%20xd/TechnoHaven/Technohaven.htm";
+            // window.location.href = "http://htxbornholm.dk/thomas-elias/Lidt%20ekstra%20xd/TechnoHaven/Technohaven.htm";
+            audio.play();
           }, 500);
         }
       }, 2500);

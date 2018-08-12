@@ -21,6 +21,9 @@
 	<div class="section" id="section3"><h1>This is my website</h1></div>
 	<div class="section" id="section4"><h1>As you might see</h1></div>
 	<div class="section" id="section5"><h1>it is in development right now.</h1></div>
+	<div class="section" id="section6"><h1>Also click on this <a href="./big.html" target="_blank">link</a> to <br> visit an other site I made.</h1></div>
+
+	</div>
 </div>
 
 
@@ -28,7 +31,10 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.js"></script>
 <script type="text/javascript">
 	var myFullpage = new fullpage('#fullpage', {
-		sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#1a28e2', '#b25db4']
+		anchors: ['1', '2', '3', '4', '5', '6', '7'],
+		sectionsColor: ['#f5ebeb', '#67c34b', '#7BAABE', '#a25858', '#4651e9', '#b25db4', '#ffc700'],
+		navigation: true,
+		navigationPosition: 'right'
 	});
 </script>
 </body>
