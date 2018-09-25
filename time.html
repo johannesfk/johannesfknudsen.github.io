@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+</head>
+
+<body onload="update(), show()">
+  <h1>DaysGetDay</h1>
+  <p id="daysgetDay"></p>
+  <h1>getDay</h1>
+  <p id="getDay"></p>
+  <h1>getMilliseconds</h1>
+  <p id="getMilliseconds"></p>
+  <h1>getSeconds</h1>
+  <p id="getSeconds"></p>
+  <h1>getMinutes</h1>
+  <p id="getMinutes"></p>
+  <h1>getHours</h1>
+  <p id="getHours"></p>
+  <h1>getDate</h1>
+  <p id="getDate"></p>
+  <h1>DaysGetMonth</h1>
+  <p id="DaysGetMonth"></p>
+  <h1>getMonth</h1>
+  <p id="getMonth"></p>
+  <h1>getFullYear</h1>
+  <p id="getFullYear"></p>
+  <h1>getTime</h1>
+  <p id="getTime"></p>
+
+  <script>
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var i = 1;
+    var d = new Date();
+    setTimeout(function show() {
+      var d = new Date();
+      document.getElementById("daysgetDay").innerHTML = days[d.getDay()];
+      document.getElementById("getDay").innerHTML = d.getDay();
+      document.getElementById("getMilliseconds").innerHTML = d.getMilliseconds();
+      document.getElementById("getSeconds").innerHTML = d.getSeconds();
+      document.getElementById("getMinutes").innerHTML = d.getMinutes();
+      document.getElementById("getHours").innerHTML = d.getHours();
+      document.getElementById("getDate").innerHTML = d.getDate();
+      document.getElementById("DaysGetMonth").innerHTML = months[d.getMonth()];
+      document.getElementById("getMonth").innerHTML = d.getMonth();
+      document.getElementById("getFullYear").innerHTML = d.getFullYear();
+      document.getElementById("getTime").innerHTML = d.getTime();
+    }, 100);
+    show();
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+</body>
+
+</html>
