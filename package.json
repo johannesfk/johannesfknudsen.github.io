@@ -1,6 +1,7 @@
 {
   "name": "johannesfknudsen.github.io",
   "version": "1.0.0",
+  "homepage": "http://johannesfknudsen.github.io/",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
