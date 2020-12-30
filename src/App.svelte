@@ -1,35 +1,24 @@
-<script>
-	export let name;
+<script lang="ts">
+import { each } from "svelte/internal";
+
+
+	export let name: string;
+
+	export let title = "Johannes F. K."
 </script>
+
+<style lang="scss" global>
+	@import "./style/global.scss";
+</style>
+
+
+<svelte:head>
+	<title>{title ? `${title} • Website` : 'Website • Home'}</title>
+</svelte:head>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<h2>J.\F.\K.\</h2>
+	<h2>./J./F./K./</h2>
+	<p>There will soon be my personal website here. In the meantime check out this <a href="https://www.youtube.com/watch?v=aPXnVvmulNk" target="_blank" rel="noreferrer noopener">amazing music video</a> and my <a href="https://www.instagram.com/farmerknudsen/">instagram</a> where I showcase some of my work.</p>
+	<small>Greatings, Johannes Farmer Knudsen</small>
 </main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
-
-<svelte:head>
-	<title>Johannes Farmer Knudsen</title>
-    <meta http-equiv="refresh" content="0; URL=https://www.youtube.com/watch?v=aPXnVvmulNk" />
-</svelte:head>
