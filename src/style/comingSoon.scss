@@ -1,0 +1,56 @@
+.csFancy {
+    color: #33b18b;
+    user-select: none;
+
+    span {
+        display:inline-block;
+        letter-spacing:15px;
+    }
+    span:last-child {
+        letter-spacing:0 !important;
+    }
+
+    span:nth-child(2n) {
+        animation: MoveUp 3s ease infinite;
+    }
+
+    span:nth-child(2n+1) {
+        animation: MoveDown 3s ease infinite;
+    }
+
+}
+
+
+@keyframes MoveUp {
+    0% {
+      transform:translateY(-10px);
+    }
+    50% {
+      transform:translateY(10px);
+    }
+    100% {
+      transform:translateY(-10px);
+    }
+}
+@keyframes MoveDown {
+    0% {
+    transform:translateY(10px);
+    }
+    50% {
+    transform:translateY(-10px);
+    }
+    100% {
+    transform:translateY(10px);
+    }
+}
+
+
+@media ( max-width: 768px ) {
+    .csFancy {
+        font-size: 15px;
+    }
+    .csFancy span {
+    letter-spacing:5px;
+    }
+}
+  
