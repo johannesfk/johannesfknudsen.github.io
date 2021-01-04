@@ -1,0 +1,14 @@
+header {
+    margin: 0px;
+    padding: 0px;
+    background-color: $bgColour;
+    color: $textColour;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}

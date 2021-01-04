@@ -1,0 +1,13 @@
+footer {
+    background-color: $bgColour;
+    color: $textColour;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+
+    h3 {
+        font-variant-caps: small-caps;
+    }
+}
