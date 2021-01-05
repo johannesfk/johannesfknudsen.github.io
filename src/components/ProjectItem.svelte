@@ -2,16 +2,11 @@
     export let item;
 </script>
 
-<style>
-    .project-item {
-        background-color: steelblue;
-    }
-    p {
-        text-align: center;
-    }
-</style>
-
 
 <div class="project-item">
-    <p>{item}</p>
+    <a href=".">
+        <div>
+            <h2>{item}</h2>
+        </div>
+    </a>
 </div>

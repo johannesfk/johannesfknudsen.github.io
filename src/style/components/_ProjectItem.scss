@@ -1,0 +1,33 @@
+$PIBaseWidth: 100px;
+ 
+.project-item {
+    background-color: steelblue;
+    counter-increment: projectItem;
+    // aspect-ratio: $phi / 1;
+    // height: $PIBaseWidth / $phi;
+    padding-bottom: 50%;
+    a {
+        text-decoration: none;
+    }
+    cursor: pointer;    
+    
+    div {
+        top: 0;
+        h2 {
+            font-size: 1.5vmin;
+            margin: 0;
+            margin-left: 4px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        h2::before {
+            content: counter(projectItem,decimal-leading-zero) " ";
+            margin-right: 18px;
+        }
+        background-color: #5142a5;
+    }
+}
+
+.projects {
+    counter-reset: projectItem;
+}

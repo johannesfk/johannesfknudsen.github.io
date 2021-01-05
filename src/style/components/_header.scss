@@ -11,4 +11,10 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    color: #ff3e00;
 }
+
+h1 a, h1 a:visited, nav h1 {
+	color: #ff3e00;
+	margin: 0;
+}   

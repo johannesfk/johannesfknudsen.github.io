@@ -1,5 +1,5 @@
 <script>
-    // your script goes here
+    let crYear = new Date().getFullYear();
 </script>
 
 <style>
@@ -7,6 +7,10 @@
 </style>
 
 <footer>
-    <h3>Social Media:</h3>
-    <a href="https://instagram.com/farmerknudsen">Instagram</a>
+    <div class="footer-some">
+        <h3>Social Media:</h3>
+        <a href="https://instagram.com/farmerknudsen">Instagram</a>
+    </div>
+    <hr>
+    <small>&copy; {crYear} Johannes Farmer Knudsen</small>
 </footer>

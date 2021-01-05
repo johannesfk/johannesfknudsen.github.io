@@ -1,0 +1,25 @@
+.scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100vh;
+    transform-origin: center right;
+    transition: transform .3s, opacity .3s;
+    opacity: 1;
+    background-color: aquamarine;
+}
+
+.scrollbar-thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    opacity: .15;
+    width: 7px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: grab;
+
+    height: 10%;
+}

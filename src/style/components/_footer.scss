@@ -2,12 +2,14 @@ footer {
     background-color: $bgColour;
     color: $textColour;
     text-align: center;
+}
+
+.footer-some {
+    h3 {
+        font-variant-caps: small-caps;
+    }
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
-
-    h3 {
-        font-variant-caps: small-caps;
-    }
 }
