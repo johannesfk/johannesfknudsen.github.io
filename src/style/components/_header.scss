@@ -1,8 +1,10 @@
+@use "../abstracts/variables";
+
 header {
     margin: 0px;
     padding: 0px;
-    background-color: $bgColour;
-    color: $textColour;
+    background-color: variables.$bgColour;
+    color: variables.$textColour;
 }
 
 nav {

@@ -1,3 +1,5 @@
+@use "../abstracts/variables";
+
 * {
     box-sizing: border-box;
 }
@@ -63,13 +65,13 @@ button:focus {
 }
 
 main {
-    color: $textColour;
+    color: variables.$textColour;
     text-align: center;
     padding: 1em;
 	margin: 0 auto;
     max-width: 240px;
 	min-height: 100vh;
-	background-color: $bgColour;
+	background-color: variables.$bgColour;
 }
 
 
@@ -87,7 +89,7 @@ h1 {
 }
 
 a {
-	color: $textColour;
+	color: variables.$textColour;
 	text-decoration: none;
 }
 
@@ -96,7 +98,7 @@ a:hover {
 }
 
 a:visited {
-	color: $textColour;
+	color: variables.$textColour;
 }
 
 small {
@@ -113,7 +115,7 @@ hr {
 
 
 hr:after {
-	color: $textColour;
+	color: variables.$textColour;
 	display: inline-block;
 	content: "------------------------------------------------------------------------------------------------";
 	letter-spacing: 8px; /* Use letter-spacing to increase space between dots*/

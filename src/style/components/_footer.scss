@@ -1,6 +1,8 @@
+@use "../abstracts/variables";
+
 footer {
-    background-color: $bgColour;
-    color: $textColour;
+    background-color: variables.$bgColour;
+    color: variables.$textColour;
     text-align: center;
 }
 
