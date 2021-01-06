@@ -1,7 +1,32 @@
 @use "../abstracts/variables";
 
-* {
+*, ::after, ::before {
     box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+    width: 11px;
+}
+
+html::-webkit-scrollbar-corner {
+	display: none;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 15%);
+    width: 7px;
+	height: 10px;
+    /* border: 1px solid #ff0000; */
+    border-radius: 10px;
+	margin: 2px;
+	cursor: grab;	
+}
+
+html::-webkit-scrollbar-track {
+    background-color: variables.$bgColour;
+}
+
+:root {
+	scrollbar-width: thin;
 }
 
 html {
@@ -18,7 +43,7 @@ html, body {
 }
 
 body {
-	background-color: #ddd;
+	background-color: variables.$bgColour;
 	color: #ff00c8;
 	margin: 0;
 	padding: 8px;

@@ -1,12 +1,14 @@
 <script>
     export let item;
+    export let gridSize;
 </script>
 
 
-<div class="project-item">
+<div class="project-item {gridSize}">
     <a href=".">
-        <div>
-            <h2>{item}</h2>
+        <h2>{item}</h2>
+        <div class="img-src">
+
         </div>
     </a>
 </div>

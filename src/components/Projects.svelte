@@ -1,20 +1,20 @@
 <script>
     import ProjectItem from "./ProjectItem.svelte";
 
-    let items = ["","","","","","","","","","","","","","","","","","","","","","","","",];
+    let items = ["Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project",];
+
+    let gridSize;
 </script>
 
-<style lang="scss">
-    .projects {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        row-gap: 15px;
-        column-gap: 15px;
-    }
-</style>
 
-<div class="projects">    
-    {#each items as item}
-        <ProjectItem {item}></ProjectItem>
+<div class="projects">
+    {#each items as item,i}
+        {#if i == 4}
+            <ProjectItem gridSize="big" {item}></ProjectItem>
+        {:else if i == 14}
+            <ProjectItem gridSize="big-wide" {item}></ProjectItem>
+        {:else}
+            <ProjectItem gridSize="default" {item}></ProjectItem>
+        {/if}
     {/each}
 </div>

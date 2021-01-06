@@ -9,7 +9,7 @@
 <header>
     <nav>
         <a href=".">ARCHIVE</a>
-        <h1><a href=".">Portfolio</a></h1>
+        <a class="logo" href="."><h1>Portfolio</h1></a>
         <a href=".">INFORMATION</a>
     </nav>
 </header>
