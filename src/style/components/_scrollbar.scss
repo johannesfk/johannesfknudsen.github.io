@@ -1,25 +1,44 @@
-.scrollbar {
-    position: absolute;
-    right: 0;
-    top: 0;
+@use "../abstracts/variables";
+
+:root::-webkit-scrollbar {
     width: 11px;
-    height: 100vh;
-    transform-origin: center right;
-    transition: transform .3s, opacity .3s;
-    opacity: 1;
-    background-color: aquamarine;
 }
 
-.scrollbar-thumb {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #fff;
-    opacity: .15;
+:root::-webkit-scrollbar-corner {
+	display: none;
+}
+:root::-webkit-scrollbar-button {
+	display: none;
+}
+:root::-webkit-resizer {
+	display: none;
+}
+
+:root::-webkit-scrollbar-thumb {
+    background-color: #262626;
+    transition: background-color 2s;
     width: 7px;
+	height: 10px;
+    /* border: 1px solid #ff0000; */
     border-radius: 10px;
-    margin: 2px;
-    cursor: grab;
-
-    height: 10%;
+	margin: 2px;
+	cursor: grab;
 }
+:root::-webkit-scrollbar-thumb:window-inactive {
+    /* Select the thumb when the browser window isn't in focus */
+    background-color: variables.$bgColour;
+    transition: background-color 2s;
+}
+
+:root::-webkit-scrollbar-track {
+    background-color: variables.$bgColour;
+}
+
+:root {
+	scrollbar-width: thin;
+}
+
+:root {
+	scroll-behavior: smooth;
+}
+

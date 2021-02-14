@@ -4,35 +4,6 @@
     box-sizing: border-box;
 }
 
-html::-webkit-scrollbar {
-    width: 11px;
-}
-
-html::-webkit-scrollbar-corner {
-	display: none;
-}
-html::-webkit-scrollbar-thumb {
-    background-color: hsl(0, 0%, 15%);
-    width: 7px;
-	height: 10px;
-    /* border: 1px solid #ff0000; */
-    border-radius: 10px;
-	margin: 2px;
-	cursor: grab;	
-}
-
-html::-webkit-scrollbar-track {
-    background-color: variables.$bgColour;
-}
-
-:root {
-	scrollbar-width: thin;
-}
-
-html {
-	scroll-behavior: smooth;
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -94,7 +65,6 @@ main {
     text-align: center;
     padding: 1em;
 	margin: 0 auto;
-    max-width: 240px;
 	min-height: 100vh;
 	background-color: variables.$bgColour;
 }
@@ -105,12 +75,6 @@ h1 {
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
-}
-
-@media (min-width: 640px) {
-    main {
-        max-width: none;
-    }
 }
 
 a {

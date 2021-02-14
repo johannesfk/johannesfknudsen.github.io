@@ -1,20 +1,71 @@
-<script>
+<script lang=ts>
+    import Modal from "./Modal.svelte";
     import ProjectItem from "./ProjectItem.svelte";
 
-    let items = ["Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project",];
+    import { onMount } from 'svelte';
+
+    //let photos = ["First Project","Second Project","Third Project","Forth Project","Fifth Project","Sixth Project","Seventh Project","Eight Project","Ninth Project","Tenth Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project",];
+
+    export let photos = [];
+    onMount(async () => {
+		const res = await fetch(`/assets/projects.json`);
+        photos = Object.values(await res.json());
+	});
+    
+    function blankIfFalsy (d) {
+        if (d) {
+            return d;
+        } else {
+            return "";
+        }
+    }
 
     let gridSize;
+    let projectId;
+
+    // Modal
+    let modalData: { showModal: boolean; modalContent: object; } = {
+        showModal: false,
+        modalContent: [],
+    }
+
+    function imageClickFunction (event) {        
+        // let modalData = [];
+        // console.log("This is something");
+        // console.log(event.detail);
+        // modalData = photos[event.detail.id];
+        // console.log(event.detail.lastChild.lastChild.src);
+        interface ModalContent {
+            imageUrl: string;
+            title: string;
+            id: number;
+        }
+        let modalContent: ModalContent = {
+            imageUrl: event.detail.lastChild.lastChild.src,
+            title: blankIfFalsy( photos[event.detail.id].title ),
+            id: event.detail.id,
+        };
+        modalData = {
+            showModal: true,
+            modalContent: modalContent
+        }
+    }
+
 </script>
 
-
-<div class="projects">
-    {#each items as item,i}
-        {#if i == 4}
-            <ProjectItem gridSize="big" {item}></ProjectItem>
-        {:else if i == 14}
-            <ProjectItem gridSize="big-wide" {item}></ProjectItem>
-        {:else}
-            <ProjectItem gridSize="default" {item}></ProjectItem>
-        {/if}
+<article class="projects">
+    {#each photos as photo,i}
+        <ProjectItem
+            gridSize={photo.gridSize}
+            {photo}
+            on:imageClick="{imageClickFunction}"
+            projectId={photo.id}>
+        </ProjectItem>
+    {:else}
+        <p>Loading...</p>
     {/each}
-</div>
+</article>
+
+{#if modalData.showModal}
+    <Modal on:close="{() => modalData.showModal = false}" {modalData} ></Modal>
+{/if}

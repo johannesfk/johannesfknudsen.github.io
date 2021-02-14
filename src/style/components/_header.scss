@@ -13,12 +13,42 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    font-family: 'SpaceMono', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
 
     .logo {
         text-decoration: none;
+        vertical-align: text-bottom;
         h1 {
-            color: #ff3e00;
+            color: variables.$textColour;
             margin: 0;
+            font-family: "GoldenRatio", "Lucida Grande", Tahoma, sans-serif;
+            font-weight: normal;
+            font-size: 4vw;
+        }
+        @media (max-aspect-ratio: 10/9) {
+            #ht-full {
+                display: none;
+            }
+            #ht-mid {
+                display: block;
+            }
+        }
+        @media (max-aspect-ratio: 6/7) {
+            #ht-mid {
+                display: none;
+            }
+            #ht-small {
+                display: block;
+            }
+        }
+        @media (max-aspect-ratio: 5/7) {
+            #ht-small {
+                display: none;
+            }
+            #ht-petite {
+                display: block;
+            }
         }
     }
     

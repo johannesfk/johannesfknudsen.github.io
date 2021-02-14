@@ -22,18 +22,19 @@ $PIBaseWidth: 100px;
     grid-row-end: span 2;
 }
 
-
 .project-item {
+    * {
+        pointer-events: none;
+    }
     counter-increment: projectItem;
     // aspect-ratio: $phi / 1;
     // height: $PIBaseWidth / $phi;
-    a {
-        text-decoration: none;
-    }
-    cursor: pointer;    
+    // height: calc(100% - (1.6vmin + 13px));
+    cursor: pointer;
     
     h2 {
-        font-size: 1.6vmin;
+        font-family: 'SpaceMono', Georgia, 'Times New Roman', Times, serif;
+        font-size: .8vw;
         margin: 0;
         padding-left: 4px;
         margin-bottom: 10px;
@@ -44,32 +45,71 @@ $PIBaseWidth: 100px;
         content: counter(projectItem,decimal-leading-zero) " ";
         margin-right: 18px;
     }
-
 }
+.project-item:hover {
+    text-decoration: none;
+}   
+
 
 .img-src {
     position: relative;
-    background-size: cover;
+    display: block;
+    // height: 100%;
+    height: calc(100% - (0.8vw + 15px));
+    /* background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    padding-bottom: 62.6%;
+    background-repeat: no-repeat; */
+    /* height: 62.6%; */
+    // padding-bottom: 62.6%;
 
-    background: repeating-linear-gradient(
+    /* background: repeating-linear-gradient(
     -55deg,
     #494949,
     #494949 10px,
     #808080 10px,
     #808080 12px
-  );
+  ); */
 }
 
 .big .img-src {
-    height: calc(100% - (1.6vmin + 11px));
+    // height: calc(100% - (1.6vmin + 13px));
     padding-bottom: 0;
 }
 
 .big-wide .img-src {
-    height: calc(100% - (1.6vmin + 11px));
+    // height: calc(100% - (1.6vmin + 13px));
     padding-bottom: 0;
 }
 
+@media (max-width: 640px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+    .big-wide {
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+    }
+    .big-wide, .big {
+        .img-src {
+            padding-bottom: 62.6%;
+        }
+    }
+}
+
+
+// Image styling
+.img-src img {
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+.big .img-src img {
+    height: 100%;
+    max-width: max-content;
+    object-fit: cover;
+}
+.big-wide .img-src img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

@@ -4,7 +4,7 @@
 	import Header from "./components/Header.svelte";
 	import Footer from "./components/Footer.svelte";
 	
-	export let title = "Johannes F. K."
+	export let title = "Johannes F. K.";
 </script>
 
 <style lang="scss" global>

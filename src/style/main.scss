@@ -7,15 +7,14 @@
 @use "base/typography";
 @use "base/utilities";
 
+@use "components/scrollbar";
 @use "components/buttons";
 @use "components/footer";
 @use "components/header";
 @use "components/ProjectItem";
+@use "components/modal";
 
 @use "layout/projects";
 @use "layout/projectShowcase";
 
 // @import "pages/";
-
-
-    

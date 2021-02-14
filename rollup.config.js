@@ -4,9 +4,12 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
-import { scss } from 'svelte-preprocess';
+// import { scss } from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
+// import { fstat } from 'fs';
+// import fs from 'fs';
+
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -80,6 +83,14 @@ export default {
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
 		!production && livereload('public'),
+		/* !production && livereload({
+			watch: 'public',
+			verbose: true,
+			https: {
+				key: fs.readFileSync('../../Coding/WebDev/RootCA.key'),
+      			cert: fs.readFileSync('../../Coding/WebDev/RootCA.crt')
+			}
+		}), */
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
