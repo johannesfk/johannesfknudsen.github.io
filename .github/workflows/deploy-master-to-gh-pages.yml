@@ -25,5 +25,9 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          BRANCH: gh-pages
-          FOLDER: public
+          branch: gh-pages
+          folder: public
+          clean: true
+          clean-exclude: |
+            CNAME
+            README.md
