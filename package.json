@@ -1,7 +1,7 @@
 {
   "name": "johannesfknudsen.github.io",
   "version": "0.0.1",
-  "homepage": "johannesfknudsen.github.io",
+  "homepage": "jfkcinema.tech/dev",
   "repository": {
     "type": "git",
     "url": "git://github.com/johannesfknudsen/johannesfknudsen.github.io.git"
@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public",
+    "start": "sirv public --host 0.0.0.0",
     "validate": "svelte-check"
   },
   "devDependencies": {
