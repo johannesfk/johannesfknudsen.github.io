@@ -8,8 +8,8 @@ import { each } from "svelte/internal";
 </script>
 
 <style lang="scss" global>
-	@import "./style/global.scss";
-	@import "./style/comingSoon.scss";
+	@import "style/global";
+	@import "style/comingSoon";
 </style>
 
 
