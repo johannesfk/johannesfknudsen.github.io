@@ -23,7 +23,7 @@
             use:image={{src, bind: { width: '.img-src' }, lazy: true }}
             alt="background"/> -->
             <!-- <img src={src} alt="gallery"/> -->
-            <img src={'/assets/images/' + photo.thumbnailUrl} alt="">
+            <img src={'./assets/images/' + photo.thumbnailUrl} alt="">
     </div>
 </a>
 
