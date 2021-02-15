@@ -20,12 +20,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install and build 🔧
         run: npm ci && npm run build --if-present
+      - name: Moves into dev folder 📂
+        run: mkdir dev && mv public dev -i
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           base_branch: dev
-          branch: gh-pages/dev
-          folder: public
+          branch: gh-pages
+          folder: dev
           clean: true
           clean-exclude: |
             CNAME
