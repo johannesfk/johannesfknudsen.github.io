@@ -8,7 +8,7 @@
 
     export let photos = [];
     onMount(async () => {
-		const res = await fetch(`/assets/projects.json`);
+		const res = await fetch(`./assets/projects.json`);
         photos = Object.values(await res.json());
 	});
     
