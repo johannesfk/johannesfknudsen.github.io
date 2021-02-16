@@ -27,3 +27,8 @@ jobs:
         with:
           branch: gh-pages
           folder: public
+          clean: false
+          clean_exclude: |
+            dev/*
+            CNAME
+            README.md
