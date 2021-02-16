@@ -51,6 +51,9 @@
         }
     }
 
+    let imgTestLinkBase = "https://res.cloudinary.com/jfknudsen/image/upload/fl_any_format,f_auto,c_scale,q_auto:good,";
+    let imgTestLinkUrl = "/cw/images/TestDJI_0199.jpg";
+
 </script>
 
 <article class="projects">

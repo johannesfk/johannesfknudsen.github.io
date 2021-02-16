@@ -1,5 +1,13 @@
 $PIBaseWidth: 100px;
 
+.projects img {
+    position: relative;
+    display: block;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+}
+
 .projects {
     counter-reset: projectItem;
     display: grid;
