@@ -1,0 +1,213 @@
+{
+  "0": {
+    "groupId": 1,
+    "id": 0,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Drone - Snow",
+    "thumbnailUrl": "DJI_0199.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "1": {
+    "groupId": 1,
+    "id": 1,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "EFC - Surroundings",
+    "thumbnailUrl": "DJI_0177.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "2": {
+    "groupId": 1,
+    "id": 2,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin",
+    "thumbnailUrl": "DSC04492.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "3": {
+    "groupId": 1,
+    "id": 3,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin",
+    "thumbnailUrl": "DSC04722.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "4": {
+    "groupId": 1,
+    "id": 4,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin - Technikmuseum",
+    "thumbnailUrl": "DSC04884.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "5": {
+    "groupId": 1,
+    "id": 5,
+    "cropAnchor": "",
+    "gridSize": "big",
+    "title": "Berlin",
+    "thumbnailUrl": "DSC04998.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "6": {
+    "groupId": 1,
+    "id": 6,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin",
+    "thumbnailUrl": "DSC05071.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "7": {
+    "groupId": 1,
+    "id": 7,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin - Bahntower",
+    "thumbnailUrl": "DSC05141.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "8": {
+    "groupId": 1,
+    "id": 8,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin - Kollhoff Tower",
+    "thumbnailUrl": "DSC05143.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "9": {
+    "groupId": 1,
+    "id": 9,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin - Museum für Naturkunde",
+    "thumbnailUrl": "DSC05523.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "10": {
+    "groupId": 1,
+    "id": 10,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin - Museum für Naturkunde",
+    "thumbnailUrl": "DSC05534.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "11": {
+    "groupId": 1,
+    "id": 11,
+    "cropAnchor": "",
+    "gridSize": "big",
+    "title": "Berlin - Museum für Naturkunde",
+    "thumbnailUrl": "DSC05536.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "12": {
+    "groupId": 1,
+    "id": 12,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin",
+    "thumbnailUrl": "DSC05631.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "13": {
+    "groupId": 1,
+    "id": 13,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin - Hauptbahnhof",
+    "thumbnailUrl": "DSC05664.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "14": {
+    "groupId": 1,
+    "id": 14,
+    "cropAnchor": "",
+    "gridSize": "big-wide",
+    "title": "Berlin - Invalidenpark",
+    "thumbnailUrl": "DSC05685.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "15": {
+    "groupId": 1,
+    "id": 15,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin - Invalidenpark",
+    "thumbnailUrl": "DSC05784.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+
+  "16": {
+    "groupId": 1,
+    "id": 16,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin",
+    "thumbnailUrl": "DSC05832.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "17": {
+    "groupId": 1,
+    "id": 17,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Berlin - Flughafen Berlin-Tegel",
+    "thumbnailUrl": "DSC05844.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "18": {
+    "groupId": 1,
+    "id": 18,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "Interrail - Netherlands",
+    "thumbnailUrl": "DSC00146.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "19": {
+    "groupId": 1,
+    "id": 19,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "MWM - Os To",
+    "thumbnailUrl": "politibil_1.8.2.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  },
+  "20": {
+    "groupId": 1,
+    "id": 20,
+    "cropAnchor": "",
+    "gridSize": "",
+    "title": "MWM - Os To",
+    "thumbnailUrl": "Bus_1.1.1.jpg",
+    "thumbnailVideoUrl": "",
+    "imageUrl": ""
+  }
+}
