@@ -2,9 +2,12 @@
 
 header {
     margin: 0px;
-    padding: 0px;
-    background-color: variables.$bgColour;
-    color: variables.$textColour;
+    padding: 0 1em;
+    background-color: variables.$bg-colour;
+    color: variables.$text-colour;
+    @media (max-width: 640px) {
+        padding: 0;
+    }
 }
 
 nav {
@@ -12,15 +15,26 @@ nav {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     font-family: 'SpaceMono', Georgia, 'Times New Roman', Times, serif;
     font-size: 1em;
 
+    .archive {
+        opacity: 0;
+    }
+
+    .info {
+        align-self: flex-start;
+    }
+
     .logo {
+        transform: translateX(1.5em);
         text-decoration: none;
-        vertical-align: text-bottom;
+        align-self: flex-end;
+        margin: 0 auto;
         h1 {
-            color: variables.$textColour;
+            text-align: center;
+            color: variables.$text-colour;
             margin: 0;
             font-family: "GoldenRatio", "Lucida Grande", Tahoma, sans-serif;
             font-weight: normal;

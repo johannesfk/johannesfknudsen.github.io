@@ -1,121 +1,129 @@
-@use "../abstracts/variables";
+@use '../abstracts/variables';
 
-*, ::after, ::before {
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-	position: relative;
-	width: 100%;
-	height: auto;
-	min-height: 100vh;
+html,
+body {
+  height: auto;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  width: 100%;
 }
 
 body {
-	background-color: variables.$bgColour;
-	color: #ff00c8;
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: variables.$bg-colour;
+  box-sizing: border-box;
+  color: #ff00c8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 8px;
 }
 
 
 label {
-	display: block;
+  display: block;
 }
 
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+input,
+button,
+select,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0 0 .5em;
+  -webkit-padding: .4em 0;
+  padding: .4em;
 }
 
 input:disabled {
-	color: #ccc;
+  color: #ccc;
 }
 
 button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
+  background-color: #f4f4f4;
+  color: #333;
+  outline: none;
 }
 
 button:disabled {
-	color: #999;
+  color: #999;
 }
 
 button:not(:disabled):active {
-	background-color: #ddd;
+  background-color: #ddd;
 }
 
 button:focus {
-	border-color: #666;
+  border-color: #666;
 }
 
 main {
-    color: variables.$textColour;
-    text-align: center;
-    padding: 1em;
-	margin: 0 auto;
-	min-height: 100vh;
-	background-color: variables.$bgColour;
+  background-color: variables.$bg-colour;
+  color: variables.$text-colour;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 1em;
+  text-align: center;
+  @media (max-width: 640px) {
+    padding: 1em 0;	
+  }
 }
 
 
 h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
+  color: #ff3e00;
+  font-size: 4em;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 a {
-	color: variables.$textColour;
-	text-decoration: none;
+  color: variables.$text-colour;
+  text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 a:visited {
-	color: variables.$textColour;
+  color: variables.$text-colour;
 }
 
 small {
-    font-style: italic;
-    font-weight: bold;
+  font-style: italic;
+  font-weight: bold;
 }
 
 hr {
-	border-bottom: 1px dotted rgb(255, 0, 0);
-	padding: 0;
-	border: none;
-	overflow: hidden;
+  border: hidden;
+  overflow: hidden;
+  padding: 0;
 }
 
 
-hr:after {
-	color: variables.$textColour;
-	display: inline-block;
-	content: "------------------------------------------------------------------------------------------------";
-	letter-spacing: 8px; /* Use letter-spacing to increase space between dots*/
-	overflow: hidden;
-	width: 90%;
-	text-overflow: clip;
-	white-space: nowrap;
+hr::after {
+  color: variables.$text-colour;
+  content: '------------------------------------------------------------------------------------------------';
+  display: inline-block;
+  letter-spacing: 8px; /* Use letter-spacing to increase space between dots*/
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  width: 90%;
 }
 
-@-moz-document url-prefix() {
-	hr::after {
-		text-overflow: "";
-	}
+@-moz-document url-prefix('') {
+  hr::after {
+    text-overflow: '';
   }
+}

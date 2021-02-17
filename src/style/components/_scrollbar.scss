@@ -26,12 +26,12 @@
 }
 :root::-webkit-scrollbar-thumb:window-inactive {
     /* Select the thumb when the browser window isn't in focus */
-    background-color: variables.$bgColour;
+    background-color: variables.$bg-colour;
     transition: background-color 2s;
 }
 
 :root::-webkit-scrollbar-track {
-    background-color: variables.$bgColour;
+    background-color: variables.$bg-colour;
 }
 
 :root {

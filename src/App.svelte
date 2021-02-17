@@ -8,7 +8,7 @@
 </script>
 
 <style lang="scss" global>
-	@import "./style/main.scss";
+  @import './style/main';
 </style>
 
 
@@ -21,7 +21,3 @@
 	<Projects></Projects>
 </main>
 <Footer></Footer>
-
-<!-- <span class="scrollbar">
-	<span class="scrollbar-thumb"></span>
-</span> -->

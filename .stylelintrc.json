@@ -1,0 +1,19 @@
+{
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-high-performance-animation"
+    ],
+    "extends": "stylelint-config-sass-guidelines",
+    "defaultSeverity": "warning",
+    "rules": {
+        "number-leading-zero": "never",
+        "indentation": [
+            2,
+            {
+              "except": ["value"],
+              "reportDisables": true
+            }
+        ],
+        "plugin/no-low-performance-animation-properties": true
+    }
+}

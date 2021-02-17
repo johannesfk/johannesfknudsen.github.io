@@ -1,123 +1,130 @@
-$PIBaseWidth: 100px;
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+$pi-base-width: 100px;
 
 .projects img {
-    position: relative;
-    display: block;
-    margin: auto;
-    padding: 0;
-    width: 100%;
+  display: block;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  width: 100%;
 }
 
 .projects {
-    counter-reset: projectItem;
-    display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        row-gap: 15px;
-        column-gap: 15px;
+  // background-color: rgb(167, 42, 119);
+  column-gap: variables.$grid-gap;
+  counter-reset: projectItem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: variables.$grid-gap;
+  @media (max-width: 640px) {
+    gap: variables.$grid-gap-small;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .big-wide {
+    grid-column-end: span 2 !important;
+    grid-row-end: span 2 !important;
+  }
+
+  .big-wide,
+  .big {
+    .img-src {
+      // padding-bottom: 62.6%;
+    }
+  }
 }
 
 .default {
-    grid-column-end: span 1;
-    grid-row-end: span 1;
+  grid-column-end: span 1;
+  grid-row-end: span 1;
 }
+
 .big {
-    grid-column-end: span 2;
-    grid-row-end: span 2;
+  grid-column-end: span 2;
+  grid-row-end: span 2;
 }
 
 .big-wide {
-    grid-column-end: span 3;
-    grid-row-end: span 2;
+  grid-column-end: span 3;
+  grid-row-end: span 2;
 }
 
 .project-item {
-    * {
-        pointer-events: none;
-    }
-    counter-increment: projectItem;
-    // aspect-ratio: $phi / 1;
-    // height: $PIBaseWidth / $phi;
-    // height: calc(100% - (1.6vmin + 13px));
-    cursor: pointer;
+  // background-color: #2e8b57;
+  counter-increment: projectItem;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+
+  * {
+    pointer-events: none;
+  }
     
-    h2 {
-        font-family: 'SpaceMono', Georgia, 'Times New Roman', Times, serif;
-        font-size: .8vw;
-        margin: 0;
-        padding-left: 4px;
-        margin-bottom: 10px;
-        text-align: left;
-        text-transform: uppercase;
-    }
-    h2::before {
-        content: counter(projectItem,decimal-leading-zero) " ";
-        margin-right: 18px;
-    }
+  h2 {
+    @include mixins.h2-size;
+    font-family: 'SpaceMono', Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding-left: 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h2::before {
+    content: counter(projectItem, decimal-leading-zero) ':';
+    margin-left: 3px;
+    margin-right: .8em;
+  }
 }
+
 .project-item:hover {
-    text-decoration: none;
+  text-decoration: none;
 }   
 
 
 .img-src {
-    position: relative;
-    display: block;
-    // height: 100%;
-    height: calc(100% - (0.8vw + 15px));
-    /* background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
-    /* height: 62.6%; */
-    // padding-bottom: 62.6%;
-
-    /* background: repeating-linear-gradient(
-    -55deg,
-    #494949,
-    #494949 10px,
-    #808080 10px,
-    #808080 12px
-  ); */
+  @include mixins.img-src-size(1c);
+  background-color: #2c2c2c;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  // padding-bottom: 62.6%;
+  position: relative;
 }
 
 .big .img-src {
-    // height: calc(100% - (1.6vmin + 13px));
-    padding-bottom: 0;
+  @include mixins.img-src-size(2c);
 }
 
 .big-wide .img-src {
-    // height: calc(100% - (1.6vmin + 13px));
-    padding-bottom: 0;
+  @include mixins.img-src-size(3c);
 }
 
-@media (max-width: 640px) {
-    .projects {
-        grid-template-columns: 1fr 1fr;
-    }
-    .big-wide {
-        grid-column-end: span 2;
-        grid-row-end: span 2;
-    }
-    .big-wide, .big {
-        .img-src {
-            padding-bottom: 62.6%;
-        }
-    }
-}
 
 
 // Image styling
 .img-src img {
-    width: 100%;
-    object-fit: cover;
-    display: inline-block;
+  //height: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  width: 100%;
+  // display: inline-block;
 }
+
 .big .img-src img {
-    height: 100%;
-    max-width: max-content;
-    object-fit: cover;
+  // height: 100%;
+  // max-width: max-content;
 }
+
 .big-wide .img-src img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+  @include mixins.img-anchor(null,null,0,null);
+  display: block;
+  max-width: 100%;
+  position: absolute;
 }

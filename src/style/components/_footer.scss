@@ -1,18 +1,27 @@
-@use "../abstracts/variables";
+@use '../abstracts/variables';
 
 footer {
-    background-color: variables.$bgColour;
-    color: variables.$textColour;
-    text-align: center;
-    padding-bottom: 10px;
+  background-color: variables.$bg-colour;
+  color: variables.$text-colour;
+  margin-top: 2em;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .footer-some {
-    h3 {
-        font-variant-caps: small-caps;
-    }
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  display: block;
+  height: 2em;
+  margin: 0 10px;
+  position: relative;
+}
+
+.copyright {
+  margin-top: 2em;
 }
