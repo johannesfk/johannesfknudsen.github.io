@@ -1,69 +1,73 @@
-@use "../abstracts/variables";
+@use '../abstracts/variables';
 
 header {
-    margin: 0px;
-    padding: 0 1em;
-    background-color: variables.$bg-colour;
-    color: variables.$text-colour;
-    @media (max-width: 640px) {
-        padding: 0;
-    }
+  background-color: variables.$bg-colour;
+  color: variables.$text-colour;
+  margin: 0;
+  padding: 0 1em;
+  @media (max-width: 640px) {
+    padding: 0;
+  }
 }
 
 nav {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'SpaceMono', Georgia, 'Times New Roman', Times, serif;
-    font-size: 1em;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: 'SpaceMono', Georgia, 'Times New Roman', Times, serif;
+  font-size: 1em;
+  justify-content: space-between;
 
-    .archive {
-        opacity: 0;
-    }
+  .archive {
+    opacity: 0;
+  }
 
-    .info {
-        align-self: flex-start;
-    }
+  .info {
+    align-self: flex-start;
+  }
 
-    .logo {
-        transform: translateX(1.5em);
-        text-decoration: none;
-        align-self: flex-end;
-        margin: 0 auto;
-        h1 {
-            text-align: center;
-            color: variables.$text-colour;
-            margin: 0;
-            font-family: "GoldenRatio", "Lucida Grande", Tahoma, sans-serif;
-            font-weight: normal;
-            font-size: 4vw;
-        }
-        @media (max-aspect-ratio: 10/9) {
-            #ht-full {
-                display: none;
-            }
-            #ht-mid {
-                display: block;
-            }
-        }
-        @media (max-aspect-ratio: 6/7) {
-            #ht-mid {
-                display: none;
-            }
-            #ht-small {
-                display: block;
-            }
-        }
-        @media (max-aspect-ratio: 5/7) {
-            #ht-small {
-                display: none;
-            }
-            #ht-petite {
-                display: block;
-            }
-        }
+  .logo {
+    align-self: flex-end;
+    margin: 0 auto;
+    text-decoration: none;
+    transform: translateX(1.5em);
+
+    h1 {
+      color: variables.$text-colour;
+      font-family: 'GoldenRatio', 'Lucida Grande', Tahoma, sans-serif;
+      font-size: 4vw;
+      font-weight: normal;
+      margin: 0;
+      text-align: center;
     }
+    @media (max-aspect-ratio: 10/9) {
+      #ht-full {
+        display: none;
+      }
+
+      #ht-mid {
+        display: block;
+      }
+    }
+    @media (max-aspect-ratio: 6/7) {
+      #ht-mid {
+        display: none;
+      }
+
+      #ht-small {
+        display: block;
+      }
+    }
+    @media (max-aspect-ratio: 5/7) {
+      #ht-small {
+        display: none;
+      }
+
+      #ht-petite {
+        display: block;
+      }
+    }
+  }
     
 }

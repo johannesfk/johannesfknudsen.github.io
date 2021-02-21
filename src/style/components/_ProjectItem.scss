@@ -11,6 +11,10 @@ $pi-base-width: 100px;
   width: 100%;
 }
 
+.projects > .sk-cube-grid {
+  top: 50vh !important;
+}
+
 .projects {
   // background-color: rgb(167, 42, 119);
   column-gap: variables.$grid-gap;

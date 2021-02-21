@@ -1,11 +1,10 @@
 <script lang=ts>
     import Modal from "./Modal.svelte";
     import ProjectItem from "./ProjectItem.svelte";
+    import LoadingAniIcon from "./elements/LoadingAniIcon.svelte";
 
     import { onMount } from 'svelte';
-
-    //let photos = ["First Project","Second Project","Third Project","Forth Project","Fifth Project","Sixth Project","Seventh Project","Eight Project","Ninth Project","Tenth Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project","Some Project",];
-
+    
     export let photos = [];
     onMount(async () => {
 		const res = await fetch(`./assets/projects.json`);
@@ -19,6 +18,10 @@
             return "";
         }
     }
+    
+    export function handleRightClick() {
+        return false;
+    }
 
     let gridSize;
     let projectId;
@@ -30,18 +33,15 @@
     }
 
     function imageClickFunction (event) {        
-        // let modalData = [];
-        // console.log("This is something");
-        // console.log(event.detail);
-        // modalData = photos[event.detail.id];
-        // console.log(event.detail.lastChild.lastChild.src);
         interface ModalContent {
             imageUrl: string;
+            thumbnailUrl: string;
             title: string;
             id: number;
         }
         let modalContent: ModalContent = {
-            imageUrl: event.detail.lastChild.lastChild.src,
+            imageUrl: photos[event.detail.id].thumbnailUrl,
+            thumbnailUrl: event.detail.lastChild.lastChild.currentSrc,
             title: blankIfFalsy( photos[event.detail.id].title ),
             id: event.detail.id,
         };
@@ -59,10 +59,11 @@
             gridSize={photo.gridSize}
             {photo}
             on:imageClick="{imageClickFunction}"
-            projectId={photo.id}>
+            projectId={photo.id}
+            on:rightClick={handleRightClick}>
         </ProjectItem>
     {:else}
-        <p>Loading...</p>
+        <LoadingAniIcon></LoadingAniIcon>
     {/each}
 </article>
 

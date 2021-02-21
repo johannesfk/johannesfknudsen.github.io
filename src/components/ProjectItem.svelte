@@ -15,7 +15,7 @@
     // let imgFileUrl = "";
 </script>
 
-<a href="." class="project-item {gridSize}" id="{projectId}" on:click|self="{event => dispatch('imageClick', event.target)}">
+<a class="project-item {gridSize}" id="{projectId}" on:click|self="{event => dispatch('imageClick', event.target)}">
     <h2>{photo.title}</h2>
     <div class="img-src">
         <!-- <img
