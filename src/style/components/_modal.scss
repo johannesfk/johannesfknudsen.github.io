@@ -99,3 +99,28 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.modal-nav {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 90%;
+  
+  .nav-forward {
+    float: right;
+  }
+  .nav-backward {
+    float: left;
+  }
+}
+
+.modal-nav > p {
+  display: block;
+  color: #ccc;
+  font-size: 5em;
+  margin: 0;
+  line-height: 60%;
+}

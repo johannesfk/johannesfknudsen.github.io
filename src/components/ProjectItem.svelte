@@ -11,8 +11,9 @@
 
     let imgBaseUrl = "https://res.cloudinary.com/jfknudsen/image/upload/fl_any_format,f_auto,c_scale,q_80,";
     let imgFileUrl = "/cw/images/";
-    // let imgBaseUrl = "";
-    // let imgFileUrl = "";
+    // let imgFileUrl = "/images/";
+    // let imgBaseUrl = "./assets";
+
 </script>
 
 <a class="project-item {gridSize}" id="{projectId}" on:click|self="{event => dispatch('imageClick', event.target)}">

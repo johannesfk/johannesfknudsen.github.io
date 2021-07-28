@@ -71,12 +71,14 @@
         
     }
     let imgBaseUrl = "https://res.cloudinary.com/jfknudsen/image/upload/fl_any_format,f_auto,c_scale,q_95,";
+    // let imgBaseUrl = "./assets";
     let imgFileUrl = "/cw/images/";
+    // let imgFileUrl = "/images/";
     
 </script>
 
 <svelte:window on:keydown={handle_keydown}/>
-<div class="modal-background" on:click={close}></div>
+
 
 <div class="modal" role="dialog" aria-modal="true" bind:this={modal} on:click|self={close}>
     <div class="lb-image-container" on:click|self={close}>
@@ -102,4 +104,12 @@
         <span autofocus on:click={close} class="lb-close">&times;</span>
         <div on:click|self={close} class="lb-caption">{modalData.modalContent.title}</div>
     </div>
+    <div class="modal-nav">
+        <!-- TODO: Forward & Backward browsing buttons and logic. Id 1 +/- -->
+        <p class="nav-forward">&#8250;</p>
+        <p class="nav-backward">&#8249;</p>
+    </div>
+</div>
+
+<div class="modal-background" on:click={close}>
 </div>
