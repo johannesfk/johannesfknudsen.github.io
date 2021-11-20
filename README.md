@@ -1,4 +1,4 @@
-# <johannesknudsen.work/dev>
+# <johannesknudsen.work/dev-new>
 
 Here rests the source code for my media portfolio website.
 
