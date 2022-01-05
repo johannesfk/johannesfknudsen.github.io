@@ -1,4 +1,4 @@
-# <https://jfkcinema.tech>
+# <https://johannesknudsen.work>
 
 Here rests the source code for my media portfolio website.
 
