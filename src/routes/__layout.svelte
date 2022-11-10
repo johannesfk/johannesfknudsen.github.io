@@ -1,19 +1,22 @@
 <script lang="ts">
-	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 </script>
-
-<Header />
 
 <main>
 	<slot />
 </main>
 
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<a href="mailto:jfknudsen.work@gmail.com">Contact</a>
 </footer>
 
 <style>
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+	
 	main {
 		flex: 1;
 		display: flex;

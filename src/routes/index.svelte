@@ -2,31 +2,18 @@
 	export const prerender = true;
 </script>
 
-<script lang="ts">
-	import Counter from '$lib/Counter.svelte';
-</script>
-
 <svelte:head>
-	<title>Home</title>
+	<title>Johannes Farmer Knudsen</title>
 </svelte:head>
 
 <section>
 	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		to your new<br />SvelteKit app
+		Johannes Farmer Knudsen
 	</h1>
 
 	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
+		Cinematographer, Gaffer, Colourist
 	</h2>
-
-	<Counter />
 </section>
 
 <style>
@@ -39,21 +26,14 @@
 	}
 
 	h1 {
+		color: var(--secondary-color);
 		width: 100%;
+		font-size: 5em;
+		font-family: 'Bebas Neue', cursive;
+		text-transform: uppercase;
 	}
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	h2 {
+		color: var(--secondary-color);
+		font-weight: bolder;
 	}
 </style>
