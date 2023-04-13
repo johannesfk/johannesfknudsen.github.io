@@ -15,3 +15,57 @@ body {
 		radial-gradient(at 0% 0%, rgba(var(--color-secondary-500) / 0.33) 0px, transparent 50%),
 		radial-gradient(at 98% 1%, rgba(var(--color-error-500) / 0.33) 0px, transparent 50%);
 }
+
+#appShell:after {
+  pointer-events: none;
+  animation: grain 1s steps(25) infinite;
+  background-image: url("src/lib/assets/images/grain.jpg");
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+  display: block;
+  content: "";
+  height: 300%;
+  width: 300%;
+  left: -100%;
+  opacity: 1;
+  position: fixed;
+  top: -100%;
+  z-index: 10;
+  overflow: hidden
+}
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 30%) }
+  90% { transform:translate(-10%, 10%) }
+}
+
+.light-shine {
+  box-shadow: 0 5px 15px rgba(255,0,255,1)!important;
+  transition: all 1.3s ease-in-out;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: limegreen;
+    box-shadow: 0 50px 15px rgba(0,255,0,1)!important;
+    opacity: 1;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
